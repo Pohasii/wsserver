@@ -28,7 +28,6 @@ func main() {
 	for range tick {
 
 		if len(Client.InMess.GetMessages()) > 0 {
-			// fmt.Println(mess.getMessage()[0])
 			err := json.Unmarshal(Client.InMess.GetMessages()[0], &mes)
 			if err != nil {
 				log.Println(err)
